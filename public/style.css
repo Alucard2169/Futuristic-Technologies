@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&family=Oswald:wght@500&family=Quicksand:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+body{
+    background-color: black;
+}
+.navbar{
+    background-color: blue;
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+.navbar .home,.menu{
+    width: 3rem;
+    cursor: pointer;
+}
+
+
+.navbar .mobile{
+    background-color: blue;
+    position: fixed;
+    display: flex;
+    top: 5.3rem;
+    flex-direction: column;
+    padding: 5rem 1rem; 
+    left: 0;
+    gap: 3rem;
+    width: 25%;
+    height: 100vh;
+    text-align: center;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms ease-in-out ;
+}
+.navbar .mobile li a{
+    writing-mode: sideways-lr;
+    font-size: 1.5rem;
+    font-family: 'Montserrat',sans-serif;
+    color: white;
+    font-weight: 400;
+}
+
+.showMenu{
+    transform: scaleX(1) !important;
+    transform-origin: left;
+}
+
+.navbar .desktop{
+    display: none;
+}
+
+.navbar label input{
+    display: none;
+}

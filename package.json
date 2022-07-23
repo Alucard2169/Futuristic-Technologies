@@ -1,0 +1,27 @@
+{
+  "name": "futuristic-technologies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alucard2169/Futuristic-Technologies.git"
+  },
+  "keywords": [],
+  "author": "Alucard2169",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alucard2169/Futuristic-Technologies/issues"
+  },
+  "homepage": "https://github.com/Alucard2169/Futuristic-Technologies#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}

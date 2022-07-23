@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Futuristic-Technologies | <%= title %>
+    </title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <!-- mobile menu controls -->
+        <label for="menuBtn"><img src="/icons/bars-solid.svg" alt="menu" class="menu"><input type="checkbox" id="menuBtn"></label>
+
+        <a href="/"><img src="/icons/10-modified.png" alt="home" class="home"></a>
+        
+        <!-- mobile menu -->
+        <ul class="mobile">
+            <li><a href="/products">Products</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="/about-us">About Us</a></li>
+        </ul>
+
+        <!-- desktop menu -->
+        <ul class="desktop">
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="/about-us">About Us</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+<script>
+    const menuBtn = document.querySelector('#menuBtn');
+    const menuBtnIc = document.querySelector('.menu')
+    const menu = document.querySelector('.mobile');
+    
+
+    menuBtn.checked = false;
+    menuBtn.addEventListener('change',(e)=>{
+        if(e.target.checked){
+            menu.classList.add('showMenu');
+            menuBtnIc.animate([{ transform: "rotate(0deg)" }, { transform: "rotate(180deg)" }], { duration: 200 })
+            menuBtnIc.src = "/icons/xmark-solid.svg"
+            
+        }
+        else{
+             menuBtnIc.animate([{ transform: "rotate(180deg)" }, { transform: "rotate(0deg)" }], { duration: 200 })
+            menu.classList.remove('showMenu')
+            menuBtnIc.src = '/icons/bars-solid.svg'
+        }
+    })
+</script>    
