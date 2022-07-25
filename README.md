@@ -57,10 +57,12 @@ Open `a/nice/path/to/a.file` then edit it with your settings. You will need:
 ## Running the project
 
     $ node start
+    
+    $ run localhost:3000 in your browser to see the project
 
 
 ## This project uses following libraries
 
-# Anime.js ( for animation )
+### Anime.js ( for animation )
 
-# Formsubmit ( for email sending )
+### Formsubmit ( for email sending )
