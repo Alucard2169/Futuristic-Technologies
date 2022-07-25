@@ -111,83 +111,68 @@
         </div>
         <p class="quoteLine">Technologies made for the future</p>
 
-        <a href="/product" class="startBtn">
+        <a href="/products" class="startBtn">
             <div class="button-wrapper">
                 <span class="Btntext">Get Started...</span>
                 <div class="button">
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
-                    <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
+                   <div class="cells"></div>
                 </div>
             </div>
         </a>
 
         <ul class="mediaLink">
-            <li><a href="https://www.facebook.com/"><img src="/icons/facebook-brands.svg" alt="facebook"></a></li>
-            <li><a href="https://twitter.com/login"><img src="/icons/twitter-brands.svg" alt="twitter"></a></li>
-            <li><a href="https://www.youtube.com/"><img src="/icons/youtube-brands.svg" alt="youtube"></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="/icons/facebook-brands.svg" alt="facebook"></a></li>
+            <li><a href="https://twitter.com/login" target="_blank"><img src="/icons/twitter-brands.svg" alt="twitter"></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank"><img src="/icons/youtube-brands.svg" alt="youtube"></a></li>
         </ul>
     </div>
     
@@ -222,14 +207,14 @@
     let buttonAnimation = anime({
             targets: '.button .cells',
             scale: [
-                { value: .1, easing: 'easeOutSine', duration: 50 },
+                { value: .5, easing: 'easeOutSine', duration: 100 },
                 { value: 1, easing: 'easeInOutQuad', duration: 200 }
             ],
-            delay: anime.stagger(200, { grid: [13, 5], from: 'center' }),
+            delay: anime.stagger(200, { grid: [10, 5], from:"center" }),
             autoplay: false,
         });
 
-        document.querySelector('.button-wrapper').onclick = buttonAnimation.play;
-        document.querySelector('.Btntext').onclick = buttonAnimation.play;
+        document.querySelector('.button-wrapper').onmouseover = buttonAnimation.play;
+        document.querySelector('.Btntext').onmouseover = buttonAnimation.play;
     
 </script>

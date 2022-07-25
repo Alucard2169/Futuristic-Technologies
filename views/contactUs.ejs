@@ -1,0 +1,31 @@
+<%- include('partials/head') %>
+<div class="background"></div>
+<div class="cont">
+<div class="contact-sec">
+    <h1 class="contHead">CONTACT US</h1>
+    <p class="continf">If you have any Feature request, question about technology, Laptops,
+        If you need software or hardware support, or Just want to say "Hi",please contact us.
+    </p>
+    <p class="followInfo">
+        YOU CAN ALSO FOLLOW US ON FACEBOOK OR TWITTER. OR BOTH. WHATEVER.
+    </p>
+    <div class="mediaLink">
+        <a href="https://facebook.com"><img src="/icons/facebook-brands.svg" alt="facebook"></a>
+        <a href="https://twitter.com"><img src="/icons/twitter-brands.svg" alt="twitter"></a>
+    </div>
+</div>
+<div class="enquiry">
+    <form target="_self" action="https://formsubmit.co/bda2f936b1e2d261829424da8eb4845b" method="POST" onclick="reset()"/>
+        <label for="username">Your Name: </label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Your E-mail Address: </label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">your Message: </label>
+        <textarea type="text" id="message" name="message" rows="10" cols = "10" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</div>
+<%- include('partials/foot')%> 

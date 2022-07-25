@@ -9,8 +9,23 @@
 }
 body{
     background-color: black;
-    overflow: hidden;
+    cursor: none;
 }
+
+.cursor{
+    width: 3rem;
+    height: 3rem;
+    border: 2px white solid;
+    border-radius: 100px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    transform-origin: 100%;
+    backdrop-filter: grayscale;
+    z-index: 10;
+}
+
+/* navbar & menu */
 .navbar{
     background-color: #151515;
     padding: 1rem 1.2rem;
@@ -24,11 +39,13 @@ body{
     border: 1px #F64C72 solid;
     border-radius: 100px;
     padding: .1rem;
+    
 }
 
 .navbar .home,.menu{
     width: 3rem;
     cursor: pointer;
+    z-index: 11;
 }
 
 
@@ -42,7 +59,7 @@ body{
     left: 0;
     gap: 3rem;
     width: 25%;
-    min-height: 100vh;
+    height: 100vh;
     text-align: center;
     transform: scaleX(0);
     transform-origin: left;
@@ -56,6 +73,7 @@ body{
     border: 1px #FB4627 solid;
     color: #FB4627;
     padding: 1rem 1.2rem;
+    
 }
 
 .showMenu{
@@ -72,8 +90,11 @@ body{
 }
 
 .homepage{
-    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
 }
+
+/* homepage background video */
 
 .homePageVide{
     position: absolute;
@@ -82,22 +103,20 @@ body{
     height: 100vh;
     width: 100%;
     object-fit: cover;
-    z-index: -1;
 }
 
-.heroLogo{
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: black;
+    opacity: .6;
+    background-blend-mode:color-burn;
+    z-index: 3;
 }
 
-.heroLogo .fut{
-    width: 16rem;
-}
-.heroLogo .tech{
-    width: 18rem;
-}
 
 .text{
     position: absolute;
@@ -107,7 +126,7 @@ body{
     padding: 100px;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 10;
 }
 
 .text #tech, #futuristic{
@@ -120,6 +139,22 @@ body{
     margin: 2rem 0 4rem;
     font-size: .9rem;
     color: white;
+}
+
+.heroLogo{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: -1rem;
+    gap: 1rem;
+}
+
+/* homepage main button */
+
+.startBtn{
+    width: 12rem;
+    height: 4rem;
+    display: block;
 }
 
 
@@ -141,27 +176,23 @@ body{
   font-family: "Oswald",sans-serif;
   font-size: 1.1rem;
 }
-.button{
+.button{  
   position:absolute;
   width: 100%;
   height: 100%;
   top :0;
   left: 0;
   display: grid;
-  grid-template-columns: repeat(13,1fr);
+  grid-template-columns: repeat(10,1fr);
   grid-template-rows: repeat(5,1fr);
   gap: 0;
 }
 
 .cells{
   background-color: #FB4726;
-  width: 100%;
+  width: 110%;
   height: 100%;
 }
-
-
-
-
 
 .text .mediaLink{
     display: flex;
@@ -175,13 +206,372 @@ body{
     width: 2rem;
 }
 
-.homepage .overlay{
+
+
+/* About page */
+
+
+.aboutUs-cont{
+    padding: 2rem 1.5rem;
+}
+
+.aboutBack{
     position: absolute;
-    height: 100vh;
+    width: 100%;
+    height:100vh;
+    opacity: .7;
+    z-index:-1;
+    object-fit: cover;
+}
+
+.ml15 {
+  font-weight: 800;
+  font-size: 3.8rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.ml15 .word {
+  display: inline-block;
+  line-height: 1em;
+  color: #689775;
+  font-family: 'Montserrat',sans-serif;
+}
+
+.content{
+    margin-top: 2rem;
+    color: white;
+    background-color: #FB4627;
+    font-family: 'Oswald',sans-serif;
+    font-size: 1.2rem;
+    line-height: 40px;
+    word-spacing: 5px;
+    padding: 2rem 1.1rem;
+    z-index: 2;
+}
+
+/* contact-us */
+
+.background {
+    position: fixed;
     width: 100%;
     top: 0;
-    right: 0;
-    z-index: 1;
-    background-color: rgba(0, 0, 0,.5);
-    background-blend-mode:multiply;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #DA4C2E;
+    height: 100vh;
+}
+.contact-sec{
+    background: #2F2219;
+    width: 95%;
+    margin: 1rem auto;
+    padding: 1rem;
+    z-index: 3;
+}
+.contact-sec .contHead{
+    color: #DA4C2E;
+    font-size: 2rem;
+    font-family: "Oswald",sans-serif;
+}
+
+.contact-sec .continf{
+    font-family: 'quicksand',sans-serif;
+    font-size: 1rem;
+    color: #77695C;
+}
+
+.contact-sec .followInfo{
+    margin-top: 1rem;
+    font-family: "Oswald",sans-serif;
+    font-size: 1.5rem;
+    color:#FEE2BC;
+}
+
+.contact-sec .mediaLink{
+    margin-top: 2rem;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-sec .mediaLink a img{
+    width: 2rem;
+}
+
+.enquiry{
+    background-color: #181818;
+    width: 95%;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.enquiry form{
+    display: flex;
+    flex-direction: column;
+}
+
+.enquiry form label{
+    color: #DA4C2E;
+    font-family: "Montserrat",sans-serif;
+    font-size: 1rem;
+}
+
+.enquiry form input{
+    color: #DA4C2E;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 100px;
+    font-size: 1.2rem;
+    border: none;
+    outline: 1px #689775 solid;
+}
+
+.enquiry form textarea{
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.enquiry form button{
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-family: "Oswald",sans-serif;
+    color: #DA4C2E;
+    border-radius: 100px;
+    background-color: #2F2219;
+    border: none;
+    width: fit-content;
+    margin: 1rem auto 0;
+    cursor: pointer;
+}
+
+
+/* products page */
+
+
+.products_cont{
+    width: 100%;
+    height: 100vh;
+}
+
+.products_cont .card{
+    transform: translateX(-400px);
+    padding: 1rem;
+    border-radius: 20px;
+    width: 90%;
+    position: relative;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.products_cont .image-cont{
+    width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: auto;
+}
+.products_cont .image-cont img{
+    width: 100%;
+}
+
+.products_cont .info{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.products_cont .info h1,span{
+    color: white;
+}
+
+.products_cont .info h1{
+    font-family: 'Oswald',sans-serif;
+    position: relative;
+    margin-bottom: .5rem;
+}
+.products_cont .info h1::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 200ms ease-in;
+    transform-origin: right;
+}
+.products_cont .card:hover .info h1::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.products_cont .info span{
+    font-family: "Montserrat",sans-serif ;
+}
+
+.laptop_cont{
+    width: 100%;
+    height: 100vh;
+}
+
+.laptop_cont .images_cont{
+    width: 90%;
+    background-color: #DA4C2E;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+.laptop_cont .images_cont img{
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.laptop_cont .laptop_info{
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+
+.laptop_cont .laptop_info .specificatations{
+    font-family: "Oswald",sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #FB4726;
+    position: relative;
+}
+
+.laptop_cont .laptop_info .specificatations::after{
+    content: '';
+    position: absolute;
+    width: 45%;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #FB4726;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms ease-in;
+}
+.laptop_cont .laptop_info .specificatations:hover::after{
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.laptop_cont .laptop_info .specific{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: "Montserrat",sans-serif;
+}
+
+.laptop_cont .laptop_info .specific .specs .details{
+   color: #DA4C2E;
+}
+
+@media only screen and (min-width: 1300px){
+    body{
+        overflow: hidden;
+    }
+    .navbar .menu,.mobile{
+        display: none;
+    }
+
+    .navbar .desktop{
+        display: flex;
+        margin-right: auto;
+        width: 30%;
+        justify-content: space-between;
+    }
+    .navbar .desktop li a{
+        color: white;
+        font-family: 'Oswald',sans-serif;
+        font-size: 1rem;
+    }
+
+    /* hero logo */
+    .homepage .overlay{
+      background-color: rgb(0, 0, 0);
+    }
+    .text #tech,#futuristic{
+        width: 20rem;
+    }
+    .heroLogo{
+        margin: auto;
+    }
+    .text .quoteLine{
+        margin: 3rem auto 3rem;
+        font-size: 1.2rem;
+    }
+    .homepage{
+        text-align: center;
+    }
+
+    .startBtn{
+        margin: auto;
+    }
+
+    .text .mediaLink{
+        width: fit-content;
+        margin: 6rem auto 0;
+        gap: 2rem;
+    }
+    .ml15{
+        font-size: 4rem;
+    }
+    .content{
+        width: 40%;
+    }
+
+    .cont{
+        width: 100%;
+        height: 100vh;
+        padding: 2rem;
+        display: flex;
+        gap: 2rem;
+        align-items:baseline;
+    }
+    .cont .contact-sec{
+        height: 18rem;
+    }
+    .cont .contact-sec .mediaLink{
+        width: 20%;
+    }
+    .cont .enquiry{
+        margin-top: -2rem;
+        height: auto;
+    }
+
+    /* product page */
+    .products_cont{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        justify-content: center;
+    }
+
+    /* details page */
+    .laptop_cont{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .laptop_cont .images_cont{
+        width: 50%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .laptop_cont .images_cont img{
+        margin: auto;
+        max-width: 70%;
+        border-radius: 20px;
+}
+.laptop_cont .laptop_info{
+    margin-top: 2rem;
+    padding: 0 1rem;
+    width: 50%;
+}
+
 }

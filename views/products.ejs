@@ -1,0 +1,35 @@
+<%- include('partials/head') %> 
+
+<section class="products_cont">
+    <% dataList.forEach((prod) => {%>
+        <a href="/laptop/<%=prod.id%>">
+            <div class="card">
+                <div class="image-cont">
+                    <img src=<%=prod.image %> alt=<%= prod.name %>>
+                </div>
+                <div class="info">
+                    <h1 class="name">
+                        <%= prod.name%>
+                    </h1>
+                    <span class="brand">
+                        <%= prod.specs.brand%>
+                    </span>
+                </div>
+            </div>
+        </a>
+    <% }) %>
+</section>
+<%- include('partials/foot') %> 
+
+<script>
+    anime({
+            targets: '.products_cont .card',
+            translateX: [
+            { value: -400, duration: 0, delay: 0 },
+            { value: 0, duration: 1500, delay: 100 }
+        ],
+            delay: anime.stagger(300, { easing: 'easeOutQuad' })
+        });
+
+    
+</script>

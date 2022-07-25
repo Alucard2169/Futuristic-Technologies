@@ -1,0 +1,33 @@
+<%- include('partials/head')%>
+<div class="laptop_cont">
+    <div class="images_cont">
+        <img src=<%= laptop.image %> class= "main" alt=<%= laptop.name %>>
+    </div>
+    <section class="laptop_info">
+        <h1 class="specificatations">Specification</h1>
+            <div class="specific">
+                <span class="brand specs">Brand | <span class="details"><%= laptop.specs.brand%></span> </span>
+                <span class="price specs">Price | <span class="details"><%= laptop.specs.price%></span></span>
+                <span class="color specs">Color | <span class="details"><%= laptop.specs.color%></span></span>
+                <span class="hard specs">Hard Disk Space | <span class="details"><%= laptop.specs.hard_disk_space%></span></span>
+                <span class="cpu specs">CPU model | <span class="details"><%= laptop.specs.cpu_model%></span></span>
+                <span class="ram specs">RAM Memory | <span class="details"><%= laptop.specs.ram_memory%></span></span>
+                <span class="os specs">Operating System | <span class="details"><%= laptop.specs.OS%></span></span>
+                <span class="processor specs">Processor | <span class="details"><%= laptop.specs.processor%></span></span>
+                <span class="graphics specs">Graphics | <span class="details"><%= laptop.specs.graphics%></span></span>
+            </div>
+    </section>
+</div>
+<%- include('partials/foot')%>
+
+
+<script>
+        anime({
+                targets: '.specific .specs',
+                translateX: [
+                    { value: -400, duration: 0, delay: 0 },
+                    { value: 0, duration: 1500, delay: 100 }
+                ],
+                delay: anime.stagger(100, { from: 'center' })
+            });
+</script>

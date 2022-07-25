@@ -1,0 +1,53 @@
+[
+    {
+        "id":1,
+        "image": "https://m.media-amazon.com/images/I/41oGjCvztKL.jpg",
+        "name": "Dell Alienware M15",
+        "specs": {
+            "brand":"Dell",
+            "price":"$ 1,854.05",
+            "color":"Dark Side of the Moon",
+            "hard_disk_space": "512 GB",
+            "cpu_model":"Ryzen 7",
+            "ram_memory":"16 GB",
+            "OS":"window 11",
+            "processor":"AMD ryzen 7 - 5800H | speed: 3.2 GHz",
+            "graphics":"NVIDIA GeForce RTX 3060 6GB GDDR6 Dedicated Graphics with max TGP 125W"
+        }
+
+    }
+    ,
+    {"id":2,
+        "image": "https://m.media-amazon.com/images/I/51u4uYGiCLL._SL1002_.jpg",
+        "name": "Lenovo ThinkBook 15",
+        "specs": {
+            "brand":"Lenovo",
+            "price":"$ 764.05",
+            "color":"Mineral Grey",
+            "hard_disk_space": "512 GB",
+            "cpu_model":"Core i5",
+            "ram_memory":"16 GB",
+            "OS":"window 11",
+            "processor":" 11th Gen Intel Core i5-1135G7, 2.4 Ghz base clock, 4.2 Ghz max boost clock, 4 Cores, 8 MB Cache",
+            "graphics":"Intel Iris Xe Graphics comes with DirectX 12 enables amazing graphics"
+        }
+
+    },
+     {"id":3,
+        "image": "https://m.media-amazon.com/images/I/71Xk9qt6IwL._SL1500_.jpg",
+        "name": "Acer Predator Helios 300 ",
+        "specs": {
+            "brand":"Acer",
+            "price":"$ 1,753.72",
+            "color":"Black",
+            "hard_disk_space": "1 TB",
+            "cpu_model":"Core i9",
+            "ram_memory":"16 GB",
+            "OS":"windows",
+            "processor":" 11th Gen Intel Core i9-11900H processor ",
+            "graphics":"NVIDIA GeForce RTX 3060 with 6 GB of dedicated GDDR6 VRAM "
+        }
+
+    }
+
+]

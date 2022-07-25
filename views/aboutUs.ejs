@@ -1,0 +1,31 @@
+<%- include('partials/head') %> 
+<img src="/photo-1542393545-10f5cde2c810.avif" alt="" class="aboutBack">
+
+
+<section class="aboutUs-cont">
+        <h1 class="ml15">
+            <span class="word">About</span>
+            <span class="word">Us</span>
+        </h1>
+        <p class="content">
+            Futuristic Technologies is on a mission to deliver a <span>Futuristic</span>
+            Experience to your Doorstep, We focus on providing an Elegant yet a Modern Environment to our users so that they can
+            work fast and efficiently in any place.
+         </p>
+</section>
+
+<%- include('partials/foot') %> 
+
+<script>
+    // animate abut us text
+    anime.timeline({ loop: false })
+            .add({
+                targets: '.ml15 .word',
+                scale: [14, 1],
+                opacity: [0, 1],
+                easing: "easeOutCirc",
+                duration: 800,
+                delay: (el, i) => 1000 * i
+            })
+
+</script>
