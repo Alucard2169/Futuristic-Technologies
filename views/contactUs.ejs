@@ -15,7 +15,7 @@
     </div>
 </div>
 <div class="enquiry">
-    <form target="_self" action="https://formsubmit.co/bda2f936b1e2d261829424da8eb4845b" method="POST" onclick="reset()"/>
+    <form target="_self" action="https://formsubmit.co/bda2f936b1e2d261829424da8eb4845b" method="POST" />
         <label for="username">Your Name: </label>
         <input type="text" id="username" name="username" required>
 
@@ -29,3 +29,11 @@
 </div>
 </div>
 <%- include('partials/foot')%> 
+
+<script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit',(e)=>{
+
+        form.reset()
+    })
+</script>
