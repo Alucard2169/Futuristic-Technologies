@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const ejs = require('ejs')
 const router = require('./routers/routers')
+const PORT = process.env.PORT || 3000;
 
 app.set("view engine","ejs")
 app.use(express.static('public'));
@@ -15,7 +16,7 @@ app.get('/', (req, res) => {
 
 app.use(router)
 
-app.listen(3000, () => {
-    console.log("server listening on PORT: 3000" )
+app.listen(PORT, () => {
+    console.log("started" )
 })
 
