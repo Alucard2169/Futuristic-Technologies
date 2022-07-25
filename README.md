@@ -58,6 +58,9 @@ Open `a/nice/path/to/a.file` then edit it with your settings. You will need:
 
     $ node start
 
-## Simple build for production
 
-    $ node build
+## This project uses following libraries
+
+# Anime.js ( for animation )
+
+# Formsubmit ( for email sending )
